@@ -1,0 +1,46 @@
+/*formats in a way that allows for flexibility on the number of elements to be displayed in a row*/
+.container {
+    margin: auto;
+    width: 100%;
+    display: flex;
+}
+
+/*formats the pictures so that they are displayed as a row*/  
+.column {
+    flex: 1;
+}
+
+/*formats the header*/
+h1 {
+    line-height: 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+/*formats the text below the images*/
+figcaption {
+    line-height: 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*formats the pictures and gives them rounded borders and some filters*/
+img {
+    filter:contrast(120%);
+    display: block ;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+}
+
+/*sets the default color of the webpage*/
+body {
+    background-color: #272823
+}
