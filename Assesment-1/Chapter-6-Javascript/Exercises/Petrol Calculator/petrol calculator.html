@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Petrol Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="petrol cal styling.css">
+</head>
+
+<body>
+
+    <!--The calculator div which formats the content to be centered-->
+    <div class="calculator">
+
+        <!--The header-->
+        <header>Petrol Calculator</header>
+        
+        <!--The main div of the calculator-->
+        <main>
+
+            <h2>Enter the fields below</h2> <br>
+
+            <!--The label that instructs the user to input cost per litre-->
+            <label>Cost per litre (You can't enter a number less than the standard cost per litre is $1.72)</label> <br>
+
+            <!--The input field that retrieves the inputted cost per litre, wherein the user must enter any cost that is above the standard cost per litre of $1.72-->
+            <input type="text" id="cost" size="30" autofocus> <br> <br>
+
+            <!--The label that instructs the user to input amount of petrol purchased in litres-->
+            <label>Amount of petrol purchased in litres</label> <br>
+
+            <!--The input field that retrieves the inputted amount of litres of petrol the user purchased-->
+            <input type="text" id="petrol" size="30">
+
+        </main>
+
+        <!--The results div, which displays the result of the calculation based on the cost per litre and amount of litres purchased-->
+        <div class="results">
+
+            <p style="margin: 20px 0 0 0">Result</p>
+
+            <!--The result is printed here-->
+            <p id="result">$&nbsp;</p>
+
+            <!--Two buttons that allow the user to show the result and to clear all the fields and the result-->
+            <button id="btn">Calculate cost!</button><!--
+            --><button onclick="clearFields()">Clear Everything</button>
+        </div>
+
+        <!--A script tag that refers to an external JavaScript file, where the calculations actually happen-->
+        <script src="petrol cal.js"></script>
+
+    </div>
+
+</body>
+</html>
+
+<!--output link: https://www.youtube.com/watch?v=cngiy2JFEA8 -->

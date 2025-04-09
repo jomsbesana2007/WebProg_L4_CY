@@ -1,0 +1,115 @@
+/*Resets any margin and padding and sets default font-family for the HTML document*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Formats the width and margin so that content fits the entire screen*/
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+/*Formats and styles the sidebar*/
+.sidebar {
+    color: #FFFFFF;
+    background-color: #172d67;
+    float: right;
+    width: 600px;
+    height: 990px;
+    padding: 20px;
+    margin: 20px 0px 20px 20px;
+}
+
+/*Styles the h2 within .sidebar class*/
+.sidebar h2 {
+    color: #FFFFFF;
+    margin: 0;
+    text-decoration: underline;   
+    font-size: 40px;    
+}
+
+/*The images row class formats the images within sidebar div so that they appear horizontally*/
+.imagesrow {
+    flex: 1;
+    justify-content: space-between;
+}
+
+/*Adjusts the size of the images so that it fits within sidebar div*/
+.imagesrow img {
+    width: 290px;
+    height: 290px;
+    object-fit: cover;
+    object-position: 0 0 100px 100px;
+}
+
+/*Formats and styles the navigation tab below the header*/
+.navtab {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #17072b;
+    text-align: center;
+    padding: 0 0 10px 0;
+    font-size: 0;
+}
+
+/*Styles the anchor tags in the navtab*/
+.navtab a {
+    text-decoration: none;
+    color:#FFFFFF;
+    font-size: 30px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+/*Gives hover effects to each anchor tag*/
+.navtab a:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/*Formats and adjusts the padding and font size and adds background color and text color*/
+header {
+    background-color: #17072b;
+    color:#FFFFFF;
+    font-size: 90px;
+    text-align: center;
+    padding: 30px 0 30px 0;
+    text-decoration: underline;
+}
+
+/*Formats and styles the footer*/
+footer {
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: #8c15e9;
+    text-align: center;
+    padding:20px;
+}
+
+/*Formats the margin of the main div*/
+main {
+    margin: 20px 0px 20px 20px;
+}
+
+/*Styles the h2 tag in main div*/
+main h2 {
+    color: #000000;
+    text-decoration: underline;   
+    font-size: 40px;
+}
+
+/*Adjusts the size of the photo in the main div*/
+main img {
+    object-fit: cover;
+    width: 1440px;
+    height: 800px;
+}
+
+/*Gives the font-size to all paragraph tags in the HTML document*/
+p {
+    font-size: 30px;
+}

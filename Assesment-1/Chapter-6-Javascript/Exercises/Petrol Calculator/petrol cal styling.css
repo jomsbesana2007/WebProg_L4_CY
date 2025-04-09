@@ -1,0 +1,96 @@
+/*Formats the <body> element so that it allows the calculator div to be displayed in the centre*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b3e6af;
+}
+
+/*Formats the design of the calculator*/
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.5);
+    width: 40%;
+    margin: 40px auto 40px auto;
+    color: #223117;
+    font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0;
+    border-radius: 20px;
+}
+
+/*Formats and styles the header within the calculator class*/
+.calculator header {
+    margin: auto;
+    padding: 20px 100px 20px 100px;
+    color: #223117;
+    font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    letter-spacing: 3px;
+}
+
+/*Formats the content in the main div*/
+.calculator main {
+    padding: 0px 20px 20px 20px;
+    text-align: left;
+    font-size: 20px;
+}
+
+/*Formats and styles the <h2> tag located within the main div*/
+.calculator main h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Formats and styles the input fields*/
+.calculator main input {
+    padding: 10px;
+    margin: 10px 0px 0px 0px;
+    transition: all 0.3s;
+    font-size: 15px;
+}
+
+/*Gives color to the input field when it is on focus*/
+.calculator main input:focus {
+   background: #e3fae2;
+}
+
+/*Formats and styles the results div*/
+.results {
+    width: 100%;
+    margin: 20px;
+    border: 3px #223117 solid;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Formats and styles the buttons in the results div*/
+.results button {
+    border: none;
+    background: none;
+    outline: none;
+    margin: 0 0 20px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    background: none;
+    outline: none;
+    color: #223117;
+    transition: all 0.3s;
+}
+
+/*Gives the hover effect to the buttons*/
+.results button:hover {
+    color: #e5fce2;
+    background: #223117;
+}
