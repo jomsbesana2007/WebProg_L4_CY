@@ -1,0 +1,248 @@
+/* CSS Styles for all webpages that share classes */
+
+/* -- LOCATIONS SHARED CSS STYLES -- */
+.locations {
+    display: flex;
+    flex-wrap: wrap; /* Ensures content is displayed below the previous row after it exceeds the width */
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+.locations-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 10px;
+    margin-top: 30px;
+    object-fit: cover; /* Resizes image so that it fits the dimensions of its parent container */
+    max-height: 400px;
+}
+.location-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.location-img-container img {
+    position: absolute; /* Position is set to absolute so that the image is aligned with its parent container */
+    object-fit: cover;
+    opacity: 0.75;
+    width: 100%;
+    height: 100%;
+}
+.location-desc {
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.desc-title {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    z-index: 2; /* Ensures that the div container won't overlap other elements/containers */
+    font-weight: 1000;
+    font-size: clamp(2rem, 4vw, 4rem); /* Ensures that the font size responds to changes to the screen size */
+    text-align: justify;
+}
+.desc-text {
+    margin: 0;
+    padding: 0;
+    line-height: clamp(1rem, 1.5vh, 1.5rem);
+    color: #ffffff;
+    z-index: 2;
+    font-weight: 500;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    text-align: justify;
+}
+
+/* -- PAGE HEADER CSS STYLES -- */
+.page-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto; /* Height is set to auto until it reaches its set max-height */
+    max-height: 600px; 
+    color: #000000;
+    overflow: hidden;
+    padding: 20px 0 20px 0;
+}
+.page-header-text {
+    position: relative;
+    text-align: center;
+    width: 60%; /* To make text look cleaner and aligned to the centre properly */
+    text-align: justify;
+    font-weight: 400;
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+}
+.page-header-title {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: clamp(1.8rem, 5vw, 5rem);
+    font-size: clamp(2rem, 6vw, 6rem);
+    font-weight: 800;
+    text-align: center;
+    width: 70%; /* To make text look cleaner and aligned to the centre properly */
+} 
+@media (max-width: 768px) {
+    .page-header-title {
+        text-align: center;
+        width: 97%; /* Sets to 97 instead of 70 percent because it won't have enough space for the title font */
+    }
+    .page-header-text {
+        line-height: normal;
+        width: 90%; 
+    }
+    .page-header {
+        padding: 0;
+    }
+}
+
+
+/* -- STATISTICS SHARED CSS STYLES -- */
+.stats-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    max-width: 940px;
+    margin-top: 50px;
+}
+.stats-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing: 0.5px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+.stats-total {
+    font-size: clamp(4rem, 7vw, 7rem);
+    font-weight: 1000;
+}
+
+@media (max-width: 768px) {
+    /* Increases the height to accommodate for the content */
+    .stats-row {
+        flex-direction: column;
+        height: 250px;
+        margin-top: 30px;
+    }
+    .stats-text {
+        line-height: 2.5rem;
+    }
+}
+
+
+/* Media query to remove border-radius properties */
+@media (max-width: 768px) {
+    .locations-container, .page-header {
+        border-radius: 0px;
+    }
+}
+
+/* -- MISCELLANEOUS INFO CONTAINER SHARED STYLES -- */
+/* Used by different webpages to maintain consistency, such as the team and career sections in
+index.html */
+.moreinfo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 500px; 
+    width: 100%;
+    background-color: #000000; /* A background color is used to give the photo a transparent fade */
+    border-radius: 10px;
+}
+.moreinfo-link {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.moreinfo-container.moreinfo-img {
+    position: absolute; /* Position of the image is set to absolute to ensure proper alignment */
+    object-fit: cover;
+    width: 100%;
+    opacity: 0.4;
+}
+.moreinfo-button {
+    height: 50px; 
+    width: 50px;
+}
+/* Styles the button in its normal state */
+.moreinfo-button-normal {
+    position: absolute;
+    opacity: 1;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+/* Styles the button in its active state */
+.moreinfo-button-active {
+    position: absolute;
+    opacity: 0;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 2; /* Positioned above the normal button to avoid overlapping when opacity is set to 1 */
+    transition: all 0.3s ease-in-out;
+}
+.moreinfo-button-active:hover {
+    opacity: 1;
+}
+.moreinfo-title {
+    font-size: clamp(2rem, 4vw, 4rem);
+    color: #ffffff;
+    font-weight: 800;
+    margin: 0;
+    width: 60%;
+    text-align: center;
+}
+.moreinfo-text {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: clamp(1rem, 1.15vw, 1.15rem);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+    width: 60%;
+}
+@media (max-width: 768px) {
+    .moreinfo-text, .moreinfo-title {
+        width: 95%; /* Is set to 95% so that text can fill most of the width of the mobile screen */
+        text-align: center;
+    }
+    .moreinfo-button-active:active {
+        opacity: 1;
+    }
+    .moreinfo-container {
+        border-radius: 0px;
+    }
+}

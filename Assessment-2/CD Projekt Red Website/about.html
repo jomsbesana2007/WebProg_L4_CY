@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CD PROJEKT RED</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures consistent and responsive scaling -->
+    <link rel="stylesheet" href="stylesheets/about-style.css"> <!-- Unique CSS file (depends on the webpage) -->
+    <link rel="stylesheet" href="stylesheets/page-layout.css"> <!-- CSS file for the general layout -->
+    <link rel="stylesheet" href="stylesheets/shared-style.css"> <!-- CSS file for styles that are used by more than one webpage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Imports custom font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="website graphics/imgs and icons/icons/cd_projekt_favicon.ico"> <!-- Sets favicon, which is displayed on the browser tab, for the webpage -->
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <!-- The clickable logo in the navbar that takes the user to index.html or the home page -->
+            <a href="index.html">
+                <img class="nav-logo" src="website graphics/imgs and icons/icons/logo.png" height="80px" alt="Logo of CD PROJEKT RED">
+            </a>
+
+            <!-- The navigation bar for desktop users -->
+            <nav class="nav-desktop">
+                <li class="about">
+                    <a href="#">ABOUT US</a>
+                    <!-- The dropdown appears when a desktop user hovers over it -->
+                    <div class="about-dropdown">
+                        <a href="about.html">OUR COMPANY</a>
+                        <a href="team.html">OUR TEAMS</a>
+                    </div>                                        
+                </li>
+                <li><a href="games.html">GAMES</a></li>
+                <li><a href="help.html">HELP</a></li>
+                <li><a href="careers.html">CAREERS</a></li>
+            </nav>
+
+            <!-- The hamburger menu that is only visible for mobile screens -->
+            <button class="nav-toggle">☰</button>
+        </div>
+
+        <!-- The navigation bar for mobile users (not visible when the user is using a desktop screen)-->
+        <nav class="nav-mobile">
+            <li>
+                <a href="#" class="about-mobile">ABOUT US &#9660;</a>
+                <!-- The dropdown appears when a mobile user presses the 'ABOUT US' button -->                     
+                <div class="about-dropdown-mobile">
+                    <a href="about.html">OUR COMPANY</a>
+                    <a href="team.html">OUR TEAMS</a>
+                </div>                                        
+            </li>
+            <li><a href="games.html">GAMES</a></li>
+            <li><a href="help.html">HELP</a></li>
+            <li><a href="careers.html">CAREERS</a></li>
+        </nav>
+
+        <script src="js files/navbar.js"></script>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <!-- Page header -->
+            <section class="section-container">
+                <!-- This div uses a shared CSS class in order to maintain consistency -->
+                <div class="page-header">
+                    <p class="page-header-title">
+                        WHERE IT ALL <span class="red-text-bold">BEGAN</span>
+                    </p>
+                    <p class="page-header-text">
+                        <span class="red-text-bold">CD PROJEKT RED</span> was established in 2002 by Marcin Iwiński and Michał Kiciński in Warsaw.
+                        The company’s main mission as a video game development company is to develop and deliver high-quality and engaging game titles. 
+                        Notable game titles developed by <span class="red-text-bold">CD PROJEKT RED</span> include Cyberpunk 2077 and The Witcher series. 
+                    </p>
+                </div>
+            </section>
+
+            <!-- CD PROJEKT RED's organisational values -->
+            <section class="section-container values">
+                <div class="subheading">
+                    OUR VALUES
+                </div>
+
+                <div class="text">
+                    At <span class="red-text-bold">CD PROJEKT RED</span>, we highly value these indispensable and sought for values from our creative talents in the workplace in order
+                    to be able to deliver video games that is of high quality and of high standard, especially in the international stage.
+                </div>
+
+                <!-- The flex-row divs are displayed in an alternative manner; one would be normal and the next would be reversed -->
+                <!-- Encases all the elements in a flex-row -->
+                <div class="values-row">
+                    <p class="values-heading">
+                        BE AMBITIOUS
+                    </p>
+                    <img class="values-num" src="website graphics/imgs and icons/icons/one.png" alt="No. 1">
+                    <p class="values-text">
+                        Always give out your best effort in work and in what you love doing
+                    </p>
+                </div>  
+                
+                <!-- Displays the flex-row in reverse to make the appearance more appealing and not stagnant-lookisng -->
+                <div class="values-row row-reverse">
+                    <p class="values-heading heading-reverse">
+                        SET THE GOAL AND PERSEVERE
+                    </p>
+                    <img class="values-num" src="website graphics/imgs and icons/icons/two.png" alt="No. 2">
+                    <p class="values-text text-reverse">
+                        Always set attainable goals and work towards it with a steadfast mindset
+                    </p>
+                </div>
+                
+                <div class="values-row">
+                    <p class="values-heading">
+                        BE HONEST WITH EVERYONE AT ALL TIMES
+                    </p>
+                    <img class="values-num" src="website graphics/imgs and icons/icons/three.png" alt="No. 3">
+                    <p class="values-text">
+                        Always be open and honest with everyone no matter the outcome
+                    </p>
+                </div>
+
+                <div class="values-row row-reverse">
+                    <p class="values-heading heading-reverse">
+                        BE KIND AND RESPECTFUL TO ALL AROUND YOU
+                    </p>
+                    <img class="values-num" src="website graphics/imgs and icons/icons/four.png" alt="No. 4">
+                    <p class="values-text text-reverse">
+                        Always treat the gamers and your fellow talents with respect and kindness
+                    </p>
+                </div>
+
+                <div class="values-row">
+                    <p class="values-heading">
+                        ALWAYS REMEMBER ABOUT GAMERS
+                    </p>
+                    <img class="values-num" src="website graphics/imgs and icons/icons/five.png" alt="No. 5">
+                    <p class="values-text">
+                        Always remember what we are here for: <span class="red-text-bold">to deliver gamers high-quality, engaging and immersive games</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- CD PROJEKT RED's studio locations -->
+            <section class="section-container">
+                <div class="subheading">
+                    OUR STUDIOS
+                </div>
+
+                <div class="text">
+                    From our home country, Poland, to Canada and the United States, <span class="red-text-bold">CD PROJEKT RED's</span> game studios all work as a 
+                    single team, striving to deliver gamers an unmatched, fun, and unforgettable gaming experience. 
+                </div>
+
+                <!-- Likewise with the values-row divs above, the locations-container divs are displayed alternatively -->
+                <div class="locations">
+                    <!-- Warsaw location -->
+                    <!-- locations-container-about class contains CSS styles specific to about.html that modifies the shared locations-container class, which is from shared-styles.css -->
+                    <div class="locations-container locations-container-about">
+                        <div class="location-img-container">
+                            <img class="img-about" src="website graphics/locations/warsaw.jpg" alt="Photo of Warsaw">
+                        </div>
+                        <div class="location-desc-box">
+                            <div class="location-desc location-desc-about">
+                                <p class="desc-title">Warsaw</p>
+                                <p class="desc-text desc-text-about">
+                                    A modern office with state-of-the-art equipment, a gym, a canteen, and even a basketball court, perfect
+                                    for socialising, relaxing, and recreation.
+                                </p>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <!-- Krakow location -->
+                    <div class="locations-container locations-container-about">
+                        <div class="location-img-container">
+                            <img class="img-about" src="website graphics/locations/krakow.jpg" alt="Photo of Krakow">
+                        </div>
+                        <!-- This 'location-desc-box' div is set to reverse -->
+                        <div class="location-desc-box desc-box-reverse">
+                            <div class="location-desc location-desc-about">
+                                <p class="desc-title">Krakow</p>
+                                <p class="desc-text desc-text-about">
+                                    A fully-pledged studio with beautiful local parks nearby.
+                                    Thanks to easy access to public transportation, you're never too far from Krakow's bustling urban life.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wroclaw location -->
+                    <div class="locations-container locations-container-about">
+                        <div class="location-img-container">
+                            <img class="img-about" src="website graphics/locations/wroclaw.jpg" alt="Photo of Wroclaw">
+                        </div>
+                        <div class="location-desc-box">
+                            <div class="location-desc location-desc-about">
+                                <p class="desc-title">Wroclaw</p>
+                                <p class="desc-text desc-text-about">
+                                    Situated in the city centre, our Wroclaw office is adorned with
+                                    pleasing and aesthetic decor that is oozing with style. The lofty industrial
+                                    designs inspire areas to create and innovate, as well as to chill out.
+                                </p>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <!-- Vancouver location -->
+                    <div class="locations-container locations-container-about">
+                        <div class="location-img-container">
+                            <img class="img-about" src="website graphics/locations/vancouver.jpg" alt="Photo of Vancouver">
+                        </div>
+                        <div class="location-desc-box desc-box-reverse">
+                            <div class="location-desc location-desc-about">
+                                <p class="desc-title">Vancouver</p>
+                                <p class="desc-text desc-text-about">
+                                    Located in one of the world's biggest hubs in the media industry. Our Vancouver office is an integral part
+                                    of our goal to deliver high-quality games and is also accessible by the city's rapid transit system.
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Boston location -->
+                    <div class="locations-container locations-container-about">
+                        <div class="location-img-container">
+                            <img class="img-about" src="website graphics/locations/boston.jpg" alt="Photo of Boston">
+                        </div>
+                        <div class="location-desc-box">
+                            <div class="location-desc location-desc-about">
+                                <p class="desc-title">Boston</p>
+                                <p class="desc-text desc-text-about">
+                                    We’re coming to Boston with a new CD PROJEKT RED hub focused primarily around building the next Cyberpunk game. 
+                                    When we’re ready, we’ll be publishing location details right here — stay tuned! 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="ftr-container">
+            &copy; 2025 All rights reserved.
+            <img src="website graphics/imgs and icons/icons/logo.png" height="80px" alt="Logo of CD PROJEKT RED">
+        </div>
+    </footer>
+</body>
+</html>

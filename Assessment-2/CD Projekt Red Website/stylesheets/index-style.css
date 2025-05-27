@@ -1,0 +1,99 @@
+/* CSS Styles for index.html (homepage) webpage */
+
+/* -- INTRO SECTION CSS STYLES -- */
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    margin-top: -125px; /* Moves the image upward so that the image fits the entire screen (for desktop) */
+}
+.intro-image {  
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%; 
+}
+.intro-image img {
+    object-fit: cover; 
+    width: 100%;
+    height: 100%; 
+    opacity: 0.5;
+}
+.intro-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: auto; /* Is set to auto so that the text is centered */
+    width: 70%;
+    font-size: clamp(3rem, 5vw, 5rem); /* Ensures that the font size responds to changes to the screen size */
+    color: #ffffff;
+    font-weight: 800;
+    z-index: 2;
+}
+@media (max-width: 768px) {
+    .intro-text {
+        top: 40vh;
+        text-align: left;
+        width: 90%;
+    }
+}
+
+
+/* -- STATS CSS STYLES (modifies the CSS properties of stats container from shared-styles.css) -- */
+#stats-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+}
+.stats-subheading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start; /* Sets the subheading to the left side of the flex container */
+    letter-spacing: 0.5px;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 1000;
+    line-height: clamp(2rem, 4vw, 4rem);
+}
+.stats-red-text {
+    font-size: clamp(2rem, 5vw, 5rem); 
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .stats-subheading {
+        text-align: center;
+        align-self: center;
+    }
+}
+
+
+/* -- LOCATIONS CSS STYLES -- */
+/* (modifies some CSS properties of locations container from shared-styles.css) */
+.locations-container-index {
+    width: 49.5%;
+    height: 200px;
+}
+@media (max-width: 768px) {
+    /* Sets width to 100 so that it displays in a column */
+    .locations-container.locations-container-index {
+        width: 100%;
+        height: 13  0px;
+        margin-top: 10px;
+    }
+}
+
+/* Media query to remove border-radius properties */
+@media (max-width: 768px) {
+    .team-container, #stats-section {
+            border-radius: 0px;
+    }
+}

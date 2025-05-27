@@ -1,0 +1,25 @@
+.wiki-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: auto; /* The height is set to auto since it depends on the content of the container */
+}
+.wiki-container {
+    width: 49.5% !important;  /* Overrides the original CSS style set for its assigned container  */
+}
+.wiki-img {
+    opacity: 0.6 !important; 
+}
+@media (max-width: 768px) {
+    .wiki-row {
+        flex-direction: column;
+    }
+    /* !important is used here to avoid formatting errors and unexpected effects */
+    .wiki-container, .wiki-container:last-child {
+        width: 100% !important;
+        height: 300px !important;
+        margin-top: 20px;
+    }
+}

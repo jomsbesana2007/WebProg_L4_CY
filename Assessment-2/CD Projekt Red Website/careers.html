@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CD PROJEKT RED</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures consistent and responsive scaling -->
+    <link rel="stylesheet" href="stylesheets/careers-style.css"> <!-- Unique CSS file (depends on the webpage) -->
+    <link rel="stylesheet" href="stylesheets/page-layout.css"> <!-- CSS file for the general layout -->
+    <link rel="stylesheet" href="stylesheets/shared-style.css"> <!-- CSS file for styles that are used by more than one webpage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Imports custom font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="website graphics/imgs and icons/icons/cd_projekt_favicon.ico"> <!-- Sets favicon, which is displayed on the browser tab, for the webpage -->
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <!-- The clickable logo in the navbar that takes the user to index.html or the home page -->
+            <a href="index.html">
+                <img class="nav-logo" src="website graphics/imgs and icons/icons/logo.png" height="80px" alt="Logo of CD PROJEKT RED">
+            </a>
+
+            <!-- The navigation bar for desktop users -->
+            <nav class="nav-desktop">
+                <li class="about">
+                    <a href="#">ABOUT US</a>
+                    <!-- The dropdown appears when a desktop user hovers over it -->
+                    <div class="about-dropdown">
+                        <a href="about.html">OUR COMPANY</a>
+                        <a href="team.html">OUR TEAMS</a>
+                    </div>                                        
+                </li>
+                <li><a href="games.html">GAMES</a></li>
+                <li><a href="help.html">HELP</a></li>
+                <li><a href="careers.html">CAREERS</a></li>
+            </nav>
+
+            <!-- The hamburger menu that is only visible for mobile screens -->
+            <button class="nav-toggle">☰</button>
+        </div>
+
+        <!-- The navigation bar for mobile users (not visible when the user is using a desktop screen)-->
+        <nav class="nav-mobile">
+            <li>
+                <a href="#" class="about-mobile">ABOUT US &#9660;</a>
+                <!-- The dropdown appears when a mobile user presses the 'ABOUT US' button -->                     
+                <div class="about-dropdown-mobile">
+                    <a href="about.html">OUR COMPANY</a>
+                    <a href="team.html">OUR TEAMS</a>
+                </div>                                        
+            </li>
+            <li><a href="games.html">GAMES</a></li>
+            <li><a href="help.html">HELP</a></li>
+            <li><a href="careers.html">CAREERS</a></li>
+        </nav>
+
+        <script src="js files/navbar.js"></script>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <!-- Page header -->
+            <section class="section-container">
+                <div class="page-header">
+                    <p class="page-header-title">
+                        CAREER <span class="red-text-bold">OPPORTUNITIES</span>
+                    </p>
+                    <p class="page-header-text">
+                        <span class="red-text-bold">CD PROJEKT RED</span> is constantly searching for new talents that can support
+                        us in achieving our goal of delivering engaging game titles to the gamers. Whether you're looking to be an engineer or animator,
+                        we will be looking forward to having you in our team!
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-container">
+                <div class="subheading">
+                    APPLICATION FORM
+                </div>
+
+                <div class="text">
+                    Please fill all the required fields below. We are looking forward to meeting you for an interview!
+                </div>
+
+                <!-- Every form element is encased in div containers to ensure consistent and clean appearance -->
+                <div class="form">
+                    <!-- The HTTP method is set to post as this HTML form requires users to enter sensitive information, such as their phone number, email,
+                     or CV. By doing this, the sensitive information is masked and won't display in the URL in the PHP server -->
+                    <form action="/positionregistration.php" target="_blank" method="post">
+                        <div class="form-column">
+                            <div class="form-container">
+                                <label class="form-label">First Name</label>
+                                <input class="form-input" type="text" name="first_name">
+                            </div>
+                            <div class="form-container">
+                                <label class="form-label">Last Name</label>
+                                <input class="form-input" type="text" name="last_name">
+                            </div>
+                            <div class="form-container">
+                                <label class="form-label">Email Address</label>
+                                <input class="form-input" type="text" name="email">
+                            </div>
+                            <div class="form-container">
+                                <label class="form-label">Confirm Email Address</label>
+                                <input class="form-input" type="text" name="confirmed_email">
+                            </div>
+                            <div class="form-container">
+                                <label class="form-label">Phone Number</label>
+                                <input class="form-input" type="text" name="phone_num">
+                            </div>   
+                            <div class="form-container">
+                                <label class="form-label">Choose position</label>
+                                <select id="position" name="position">
+                                    <option value="art">Art</option>
+                                    <option value="engineering">Engineering</option>
+                                    <option value="sound&audio">Sound and Audio</option>
+                                    <option value="production">Production</option>
+                                    <option value="animation">Animation</option>
+                                </select>
+                            </div>
+                            <div class="form-container">
+                                <label class="form-label">Upload your Resume</label>
+                                <input type="file" id="fileupload" name="fileupload" accept="*.*" />
+                            </div>
+                            <div class="form-container">
+                                <label class="form-label">Anything you want to let us know? (Optional)</label>
+                                <textarea class="form-textarea" name="message">Type here...</textarea>
+                            </div>
+                            <div class="form-container">
+                                <input id="submit" type="submit" value="Submit Application">
+                            </div>                         
+                        </div>
+                    </form>   
+                    
+                    <!-- Validates whether the user had inputted anything onto all of the fields or not -->
+                    <script src="js files/form-input-validation.js"></script>
+                </div>   
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="ftr-container">
+            &copy; 2025 All rights reserved.
+            <img src="website graphics/imgs and icons/icons/logo.png" height="80px" alt="Logo of CD PROJEKT RED">
+        </div>
+    </footer>
+</body>
+</html>

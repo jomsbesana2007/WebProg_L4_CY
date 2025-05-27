@@ -1,0 +1,246 @@
+/* CSS Styles that formats the general layout of the website */
+
+/* Sets all div box-sizing to border-box to avoid unwanted issues with formatting */
+* {
+    box-sizing: border-box;
+}
+
+/* Removes any pre-defined margins and paddings and resets font size to avoid format errors */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1px;
+    min-height: 100vh;
+    max-width: 100vw;
+    scroll-behavior: smooth;
+}
+
+
+/*  -- NAVIGATION BAR STYLES -- */
+
+/* -- Sets background color and padding of the navigation bar -- */
+header {
+    background-color: #101010;
+    padding: 20px;
+    position: sticky; /* Ensures that the navbar stays on the top of the user's screen */
+    top: 0; /* Stays at the top of the header container */
+    z-index: 999; /* Sets the z-index to the highest possible value to prevent overlapping */
+}
+@media (max-width: 768px) {
+    header {
+        position: relative; /* Resolves the issue with position: sticky when using mobile */
+    }
+}
+
+
+/* -- Standard layout for the navigation bar -- */
+.nav-logo {
+    height: 80px;
+}
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto; /* Centers the navigation bar */
+    margin-right: auto;
+    justify-content: space-evenly; /* Adds spacing between the logo and the navigation links */
+    align-items: center;
+}
+
+
+/* -- Styles for navigation bar if the user is on desktop -- */
+.nav-desktop {
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+}
+.nav-desktop, .nav-mobile li {
+    list-style: none; /* Removes any bullet points that come by default */
+}
+.nav-desktop a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 750;
+    display: block; /* Is set to block so that it is easier to manipulate CSS properties of anchor tags */
+    transition: all 0.3s ease;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+}
+.nav-desktop a:hover {
+    color:#ff1f1f;
+}
+/* CSS Styles for the dropdown menu below 'About Us' anchor tag */
+.about-dropdown {
+    position: absolute;
+    display: none; /* Hidden by default unless user is on mobile */
+    width: 200px;
+    height: auto;
+    max-height: 200px; /* Height is automatically adjusted until it hits the 200px max-height limit */
+    background-color: #ff3a3a;
+    transition: opacity 0.3s ease-in;
+    padding: 20px;
+}
+.about-dropdown a {
+    padding: 5px 10px 5px 10px; 
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+}
+/* Media query for desktop screens since pseudo classes hover and active from nav-desktop and nav-mobile respectively will conflict */
+@media (min-width: 769px) {
+    .about-dropdown a:hover {
+        background-color: #ffe8e8;
+        color: #ff4747;
+    }
+    .about:hover .about-dropdown {
+        display: block; /* Displays the dropdown menu after having been previously hidden */ 
+    }
+}
+
+/* -- Styles for navigation bar if the user is on mobile -- */
+.nav-mobile {
+    display: none; /* Hidden by default until the user is on mobile */
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden; /* Crops any overlapping elements */
+    max-height: 0; /* Ensures the navigation bar for mobile is hidden */
+    transition: max-height 0.3s ease;
+    padding-top: 20px;
+}
+.nav-mobile a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 750;
+    display: block;
+    transition: all 0.3s ease;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+}
+/* CSS Styles for the hamburger menu that displays when the user is on mobile */
+.nav-toggle {
+    display: none; /* Hides the hamburger menu */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer; 
+}
+
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none; /* Hides the navbar for desktop to make way for the navbar for mobile */
+    }
+    .nav-toggle {
+        display: block; /* Displays the hamburger menu */
+    }
+    .nav-mobile.show {
+        display: flex; /* Sets display property to flex as nav-mobile's flex-direction property is set to column */
+        max-height: 300px;
+    }
+    .about-mobile {
+        justify-content: center;
+        align-items: center;
+    }
+    .about-dropdown-mobile {
+        position: relative;
+        display: none; /* This property is set to hidden by default until the user clicks on the drop-town button below 'About Us.'
+                          It is handled by JavaScript and listens for a 'click' event for it to display */
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        background-color: #101010;
+        transition: opacity 0.3s ease-in;
+        padding: 10px 0 10px 0;
+    }
+    .about-dropdown-mobile a {
+        padding: 5px 10px 5px 10px; 
+        font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+    }
+}
+
+
+/* -- MAIN BODY STYLES -- */
+main {
+    color: #000000;
+}
+/* Styles for the main container */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: auto; /* Positions it to the center */
+    margin-right: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* Formats all the section containers in the webpage so that it's consistent */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 30px;
+    height: auto;
+    width: 100%;
+    max-width: 1300px;
+}
+
+
+/* -- FOOTER STYLES -- */
+footer {
+    background-color: #101010;
+    color: #ffffff;
+}
+/* Sets the container as flexbox for a responsive webpage */
+.ftr-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto; /* Aligns content to the center */
+    margin-right: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    height: 120px;
+    max-width: 1300px;
+    font-weight: 700;
+}
+
+/* Styles for h1-like subheading */
+.subheading {
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    font-weight: 1000;
+}
+/* Styles all the smaller subheaders in the webpage */
+.subheading2 {
+    font-size: clamp(1.5, 2.2vw, 2.2rem);
+    font-weight: 1000;
+}
+
+.red-text {
+    color: #ff1f1f;
+}
+.red-text-bold {
+    color: #ff1f1f;
+    font-weight: 800;
+    letter-spacing: normal;
+}
+
+.text {
+    margin: 20px 0 20px 0;
+    font-weight: 400;
+    font-size: clamp(0.9rem, 1.15vw, 1.15rem);
+    text-align: justify;
+    width: 60%;
+}
+@media (max-width: 768px) {
+    .text {
+        width: 90%;
+    }
+    .subheading {
+        text-align: center;
+    }
+}

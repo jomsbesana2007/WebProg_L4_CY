@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CD PROJEKT RED</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures consistent and responsive scaling -->
+    <link rel="stylesheet" href="stylesheets/games-style.css"> <!-- Unique CSS file (depends on the webpage) -->
+    <link rel="stylesheet" href="stylesheets/page-layout.css"> <!-- CSS file for the general layout -->
+    <link rel="stylesheet" href="stylesheets/shared-style.css"> <!-- CSS file for styles that are used by more than one webpage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Imports custom font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="website graphics/imgs and icons/icons/cd_projekt_favicon.ico"> <!-- Sets favicon, which is displayed on the browser tab, for the webpage -->
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <!-- The clickable logo in the navbar that takes the user to index.html or the home page -->
+            <a href="index.html">
+                <img class="nav-logo" src="website graphics/imgs and icons/icons/logo.png" height="80px" alt="Logo of CD PROJEKT RED">
+            </a>
+
+            <!-- The navigation bar for desktop users -->
+            <nav class="nav-desktop">
+                <li class="about">
+                    <a href="#">ABOUT US</a>
+                    <!-- The dropdown appears when a desktop user hovers over it -->
+                    <div class="about-dropdown">
+                        <a href="about.html">OUR COMPANY</a>
+                        <a href="team.html">OUR TEAMS</a>
+                    </div>                                        
+                </li>
+                <li><a href="games.html">GAMES</a></li>
+                <li><a href="help.html">HELP</a></li>
+                <li><a href="careers.html">CAREERS</a></li>
+            </nav>
+
+            <!-- The hamburger menu that is only visible for mobile screens -->
+            <button class="nav-toggle">☰</button>
+        </div>
+
+        <!-- The navigation bar for mobile users (not visible when the user is using a desktop screen)-->
+        <nav class="nav-mobile">
+            <li>
+                <a href="#" class="about-mobile">ABOUT US &#9660;</a>
+                <!-- The dropdown appears when a mobile user presses the 'ABOUT US' button -->                     
+                <div class="about-dropdown-mobile">
+                    <a href="about.html">OUR COMPANY</a>
+                    <a href="team.html">OUR TEAMS</a>
+                </div>                                        
+            </li>
+            <li><a href="games.html">GAMES</a></li>
+            <li><a href="help.html">HELP</a></li>
+            <li><a href="careers.html">CAREERS</a></li>
+        </nav>
+
+        <script src="js files/navbar.js"></script>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <!-- Page header -->
+            <section class="section-container">
+                <!-- This div uses a shared CSS class in order to maintain consistency -->
+                <div class="page-header">
+                    <p class="page-header-title">
+                        GAMES THAT WE <span class="red-text-bold">TAKE PRIDE IN</span>
+                    </p>
+                    <p class="page-header-text">
+                        'The Witcher,' a critically acclaimed game series, had brought us to the big stage.
+                        <span class="red-text-bold">CD PROJEKT RED</span> strives to
+                        deliver gamers the best gaming experience with rich, deep and immersive storylines, beautiful and
+                        meticulously sculpted graphics, and an optimised, fast, and bug-free in-game experience.
+                    </p>
+                    <div class="stats-row" style="position: relative;">
+                        <div class="stats-text">
+                            WE HAVE RECEIVED <span class="red-text stats-total">1208+</span> GAME AWARDS
+                        </div>
+
+                        <div class="stats-text">
+                            WE SOLD MORE THAN <span class="red-text stats-total">93M</span> COPIES
+                        </div>
+                    </div>
+                </div>
+            </section>
+ 
+            <!-- CD PROJEKT RED's list of popular video game titles -->
+            <section class="section-container">
+                <div class="subheading">
+                    OUR GAMES
+                </div>
+
+                <div class="text">
+                    The games that have satisfied and met the high expectations of not only our gamers but also our amazing, creative, hardworking talents at <span class="red-text-bold">CD PROJEKT RED</span>.
+                </div>
+
+                <div class="game-container">
+                    <div class="video-container">
+                        <!-- The thumbnail displays on a desktop layout until the user hovers over it, which will then be hidden behind the video (because of z-index property) -->
+                        <div class="thumbnail">
+                            <img src="website graphics/imgs and icons/cyberpunk2077.jpg" alt="Promotional image of 'Cyberpunk 2077' game">
+                        </div>
+                        <!-- The video plays on loop when the user is on mobile. Otherwise, it won't play or appear until the user hovers over it -->
+                        <video class="game-vid" playsinline loop muted>
+                            <source src="website graphics/videos/cyberpunk-gameplay.mp4" type="video/mp4">
+                            Your browser does not support video tag
+                        </video>                            
+                    </div>
+
+                    <!-- The 'desc-container' class is absolutely positioned so that it appears below the video -->
+                    <div class="desc-container">
+                        <div class="desc-button">
+                            <a href="https://www.cyberpunk.net/ae/en/buy" target="_blank" class="gamelink">
+                                <!-- Two images are used here so that when the user hovers above moreinfo-button, button-normal's opacity would be set to 0 to show button-active -->
+                                <img class="gamebutton-normal" src="website graphics/imgs and icons/icons/arrow-icon-normal.png" alt="normal button">
+                                <img class="gamebutton-active" src="website graphics/imgs and icons/icons/arrow-icon-active.png" alt="active button">
+                            </a> 
+                        </div>                          
+                        <p class="game-title">
+                            CYBERPUNK 2077
+                        </p>                       
+                        <p class="text game-desc">
+                            A massively open-world, action-focused adventure RPG, set in the megalopolis of Night City. 
+                            You play as a cyberpunk mercenary wrapped up in a do-or-die fight for survival. Legends are made here. What will yours be? 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="game-container">
+                    <div class="video-container">
+                        <div class="thumbnail">
+                            <img src="website graphics/imgs and icons/thewitcher.jpg" alt="Promotional image of 'The Witcher' game">
+                        </div>
+                        <video class="game-vid" playsinline loop muted>
+                            <source src="website graphics/videos/the-witcher-gameplay.mp4" type="video/mp4">
+                            Your browser does not support video tag
+                        </video>     
+                    </div>
+
+                    <div class="desc-container">
+                        <div class="desc-button">
+                            <a href="https://buy.thewitcher.com/en_ae/" target="_blank" class="gamelink">
+                                <img class="gamebutton-normal" src="website graphics/imgs and icons/icons/arrow-icon-normal.png" alt="normal button">
+                                <img class="gamebutton-active" src="website graphics/imgs and icons/icons/arrow-icon-active.png" alt="active button">
+                            </a>      
+                        </div>
+                        <p class="game-title">
+                            THE WITCHER
+                        </p>
+                        <p class="text game-desc">
+                            You are Geralt of Rivia, mercenary monster slayer.
+                            Your current contract? Tracking down Ciri — the Child of Prophecy, a living weapon that can alter the shape of the world.
+                        </p>
+                    </div>
+                    
+                    <!-- Handles the animation between video to image and vice versa when the user hovers over it -->
+                    <script src="js files/img-to-vid-animation.js"></script>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- The footer section -->
+    <footer>
+        <div class="ftr-container">
+            &copy; 2025 All rights reserved.
+            <img src="website graphics/imgs and icons/icons/logo.png" height="80px" alt="Logo of CD PROJEKT RED">
+        </div>
+    </footer>
+</body>
+</html>

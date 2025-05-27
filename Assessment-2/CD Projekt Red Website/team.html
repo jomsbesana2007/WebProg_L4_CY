@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CD PROJEKT RED</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures consistent and responsive scaling -->
+    <link rel="stylesheet" href="stylesheets/team-style.css"> <!-- Unique CSS file (depends on the webpage) -->
+    <link rel="stylesheet" href="stylesheets/page-layout.css"> <!-- CSS file for the general layout -->
+    <link rel="stylesheet" href="stylesheets/shared-style.css"> <!-- CSS file for styles that are used by more than one webpage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Imports custom font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="website graphics/imgs and icons/icons/cd_projekt_favicon.ico"> <!-- Sets favicon, which is displayed on the browser tab, for the webpage -->
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <!-- The clickable logo in the navbar that takes the user to index.html or the home page -->
+            <a href="index.html">
+                <img class="nav-logo" src="website graphics/imgs and icons/icons/logo.png" height="80px" alt="Logo of CD PROJEKT RED">
+            </a>
+
+            <!-- The navigation bar for desktop users -->
+            <nav class="nav-desktop">
+                <li class="about">
+                    <a href="#">ABOUT US</a>
+                    <!-- The dropdown appears when a desktop user hovers over it -->
+                    <div class="about-dropdown">
+                        <a href="about.html">OUR COMPANY</a>
+                        <a href="team.html">OUR TEAMS</a>
+                    </div>                                        
+                </li>
+                <li><a href="games.html">GAMES</a></li>
+                <li><a href="help.html">HELP</a></li>
+                <li><a href="careers.html">CAREERS</a></li>
+            </nav>
+
+            <!-- The hamburger menu that is only visible for mobile screens -->
+            <button class="nav-toggle">☰</button>
+        </div>
+
+        <!-- The navigation bar for mobile users (not visible when the user is using a desktop screen)-->
+        <nav class="nav-mobile">
+            <li>
+                <a href="#" class="about-mobile">ABOUT US &#9660;</a>
+                <!-- The dropdown appears when a mobile user presses the 'ABOUT US' button -->                     
+                <div class="about-dropdown-mobile">
+                    <a href="about.html">OUR COMPANY</a>
+                    <a href="team.html">OUR TEAMS</a>
+                </div>                                        
+            </li>
+            <li><a href="games.html">GAMES</a></li>
+            <li><a href="help.html">HELP</a></li>
+            <li><a href="careers.html">CAREERS</a></li>
+        </nav>
+
+        <script src="js files/navbar.js"></script>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <!-- Page header -->
+            <section class="section-container">
+                <!-- This div uses a shared CSS class in order to maintain consistency -->
+                <div class="page-header">
+                    <p class="page-header-title">
+                        THE TALENTS THAT RUN <span class="red-text-bold">OUR COMPANY</span>
+                    </p>
+                    <p class="page-header-text">
+                        Meet our highly-skilled and passionate talents at <span class="red-text-bold">CD PROJEKT RED</span> that strive to create a better gaming experience with the focus
+                        of delivering high-quality, intriguing, engaging, and well-rounded video games for the gamers.
+                    </p>                    
+                </div>
+            </section>
+
+            <section class="section-container">
+                <div class="subheading">
+                    OUR TEAMS
+                </div>
+
+                <div class="text">
+                    Our incredibly talented and passionate teams at <span class="red-text-bold">CD PROJEKT RED</span> play an integral part before, during, and after
+                    game development, ensuring that the games that we release meet our set standards and are what gamers enjoy and appreciate.
+                </div>
+
+                <!-- Encloses all the teams-box divs witin teams-container class -->
+                <div class="teams-container">
+                    <div class="teams-box">
+                        <img src="website graphics/imgs and icons/careers/art.jpg" alt="Art">
+                        <!-- Displays an overlay and its text over the photo -->
+                        <div class="teams-desc">
+                            <div class="teams-title">
+                                ART
+                            </div>
+                            <div class="teams-text">
+                                Artists at CD PROJEKT RED define the visual style and identity of our games. 
+                                From environments to characters, our artists play a big role in the development of our best games.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="teams-box">
+                        <img src="website graphics/imgs and icons/careers/design&story.jpg" alt="Design and Story">
+                        <div class="teams-desc teams-desc-reverse">
+                            <div class="teams-title">
+                                DESIGN & STORY 
+                            </div>
+                            <div class="teams-text">
+                                Designers and story-writers play a central role our game development, not only making sure our games have a story to tell
+                                but also telling an engaging and immersive one, which will pique the interest of our gamers.
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <div class="teams-box">
+                        <img src="website graphics/imgs and icons/careers/production.jpg" alt="Production">
+                        <div class="teams-desc teams-desc-reverse">
+                            <div class="teams-title">
+                                PRODUCTION
+                            </div>
+                            <div class="teams-text">
+                                Producers at CD PROJEKT RED oversees the production process of our games, ensuring game development goes smoothly,
+                                as well as fostering collaboration and productivity in our studios.
+                            </div>
+                        </div>                        
+                    </div>       
+                    
+                    <div class="teams-box">
+                        <img src="website graphics/imgs and icons/careers/engineering.jpg" alt="Engineering">
+                        <div class="teams-desc teams-desc-reverse">
+                            <div class="teams-title">
+                                ENGINEERING
+                            </div>
+                            <div class="teams-text">
+                                Our engineers constantly push the limit of the technical aspects of video games to be able to reach our goals, as well as 
+                                innovating new ideas and concepts that will shape the future of game development.
+                            </div>
+                        </div>                        
+                    </div>    
+                    
+                    <div class="teams-box">
+                        <img src="website graphics/imgs and icons/careers/animation.jpg" alt="Animation">
+                        <div class="teams-desc teams-desc-reverse">
+                            <div class="teams-title">
+                                ANIMATION
+                            </div>
+                            <div class="teams-text">
+                                Animators at CD PROJEKT RED give life and immersion to our games, which ensures that our games are as engaging to the gamers as possible.
+                            </div>
+                        </div>                        
+                    </div>    
+                    
+                    <div class="teams-box">
+                        <img src="website graphics/imgs and icons/careers/music&audio.jpg" alt="Music and Audio">
+                        <div class="teams-desc teams-desc-reverse">
+                            <div class="teams-title">
+                                MUSIC & AUDIO
+                            </div>
+                            <div class="teams-text">
+                                The music and audio engineers at CD PROJEKT RED methodically and meticulously design music and sounds that bring that realistic, immersive, and
+                                feeling to the in-game experience.
+                            </div>
+                        </div>                        
+                    </div>
+                    
+                    <div class="teams-box">
+                        <img src="website graphics/imgs and icons/careers/localisation.jpg" alt="Localisation">
+                        <div class="teams-desc teams-desc-reverse">
+                            <div class="teams-title">
+                                LOCALISATION
+                            </div>
+                            <div class="teams-text">
+                                CD PROJEKT RED's localisation team ensures that we can be able to break language barriers and make our games accessible to everyone around the world to enjoy.
+                            </div>
+                        </div>                        
+                    </div>
+                
+                    <div class="teams-box">
+                        <img src="website graphics/imgs and icons/careers/publishing.jpg" alt="Publishing">
+                        <div class="teams-desc teams-desc-reverse">
+                            <div class="teams-title">
+                                PUBLISHING
+                            </div>
+                            <div class="teams-text">
+                                Our publishers ensure the success and that our games reach to the gamers of the international community. 
+                            </div>
+                        </div>                        
+                    </div>                           
+                </div>
+            </section>
+
+            <!-- Displays Join Us link -->
+            <section class="section-container">
+                <div class="moreinfo-container">
+                    <img class="moreinfo-container moreinfo-img" src="website graphics/imgs and icons/cd-projekt-office.jpg" alt="Photo of CD PROJEKT RED talents">
+                    <div class="moreinfo-link">
+                        <p class="moreinfo-title">
+                            JOIN US TODAY
+                        </p>
+                        <p class="moreinfo-text">
+                            At <span class="red-text-bold">CD PROJEKT RED</span>, we are a family of different nationalities, backgrounds, cultures, etc., but we
+                            share one ultimate goal: <span class="red-text-bold">to create and deliver high-quality games as one family</span>
+                        </p>
+                        <a href="careers.html" target="_blank" class="moreinfo-button">
+                            <!-- Two images are used here so that when the user hovers above moreinfo-button, button-normal's opacity would be set to 0 to show button-active -->
+                            <img class="moreinfo-button-normal" src="website graphics/imgs and icons/icons/arrow-icon-normal.png" alt="normal button">
+                            <img class="moreinfo-button-active" src="website graphics/imgs and icons/icons/arrow-icon-active.png" alt="active button">
+                        </a>                        
+                    </div>
+                </div>       
+            </section>
+        </div>
+    </main>
+
+    <!-- The footer section -->
+    <footer>
+        <div class="ftr-container">
+            &copy; 2025 All rights reserved.
+            <img src="website graphics/imgs and icons/icons/logo.png" height="80px" alt="Logo of CD PROJEKT RED">
+        </div>
+    </footer>
+</body>
+</html>

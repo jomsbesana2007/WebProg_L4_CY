@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CD PROJEKT RED</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures consistent and responsive scaling -->
+    <link rel="stylesheet" href="stylesheets/index-style.css"> <!-- Unique CSS file (depends on the webpage) -->
+    <link rel="stylesheet" href="stylesheets/page-layout.css"> <!-- CSS file for the general layout -->
+    <link rel="stylesheet" href="stylesheets/shared-style.css"> <!-- CSS file for styles that are used by more than one webpage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Imports custom font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="website graphics/imgs and icons/icons/cd_projekt_favicon.ico"> <!-- Sets favicon, which is displayed on the browser tab, for the webpage -->
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <!-- The clickable logo in the navbar that takes the user to index.html or the home page -->
+            <a href="index.html">
+                <img class="nav-logo" src="website graphics/imgs and icons/icons/logo.png" height="80px" alt="Logo of CD PROJEKT RED">
+            </a>
+
+            <!-- The navigation bar for desktop users -->
+            <nav class="nav-desktop">
+                <li class="about">
+                    <a href="#">ABOUT US</a>
+                    <!-- The dropdown appears when a desktop user hovers over it -->
+                    <div class="about-dropdown">
+                        <a href="about.html">OUR COMPANY</a>
+                        <a href="team.html">OUR TEAMS</a>
+                    </div>                                        
+                </li>
+                <li><a href="games.html">GAMES</a></li>
+                <li><a href="help.html">HELP</a></li>
+                <li><a href="careers.html">CAREERS</a></li>
+            </nav>
+
+            <!-- The hamburger menu that is only visible for mobile screens -->
+            <button class="nav-toggle">☰</button>
+        </div>
+
+        <!-- The navigation bar for mobile users (not visible when the user is using a desktop screen)-->
+        <nav class="nav-mobile">
+            <li>
+                <a href="#" class="about-mobile">ABOUT US &#9660;</a>
+                <!-- The dropdown appears when a mobile user presses the 'ABOUT US' button -->                     
+                <div class="about-dropdown-mobile">
+                    <a href="about.html">OUR COMPANY</a>
+                    <a href="team.html">OUR TEAMS</a>
+                </div>                                        
+            </li>
+            <li><a href="games.html">GAMES</a></li>
+            <li><a href="help.html">HELP</a></li>
+            <li><a href="careers.html">CAREERS</a></li>
+        </nav>
+
+        <script src="js files/navbar.js"></script>
+    </header>
+    
+    <main>
+        <div class="main-container">
+            <!-- Page header -->
+            <section>
+                <!-- This header is unique to index.html (or the homepage) and is displayed in a way that it fits the entire screen of the user -->
+                <div class="intro-container">
+                    <div class="intro-image">
+                        <img src="website graphics/imgs and icons/office-photo.jpg" alt="Photo of a CD PROJEKT RED office">
+                    </div>
+                    
+                    <div class="intro-text">
+                        WE BREAK RULES
+                        <span class="red-text">WE MAKE RULES</span>
+                    </div>  
+                </div>
+            </section>
+
+            <!-- Link where users can go learn more about CD PROJEKT RED's teams -->
+            <!-- The 'section-container' class is used in this webpage and other webpages to maintain consistency of the webpages, especially the width of the content -->
+            <section class="section-container">
+                <div class="moreinfo-container">
+                    <img class="moreinfo-container moreinfo-img" src="website graphics/imgs and icons/cd-projekt-group-photo.jpg" alt="Photo of CD PROJEKT RED talents">
+                    <div class="moreinfo-link">
+                        <p class="moreinfo-title">
+                            MEET OUR TEAM
+                        </p>
+                        <p class="moreinfo-text">
+                            We are a team with <span class="red-text-bold">high ambitions, creativity, talent, passion, and pride</span> for our games.
+                            We are <span class="red-text-bold">CD PROJEKT RED,</span> a video game development studio striving for the best in our work.
+                        </p>
+                        <a href="team.html" target="_blank" class="moreinfo-button">
+                            <!-- Two images are used here so that when the user hovers above moreinfo-button, button-normal's opacity would be set to 0 to show button-active -->
+                            <img class="moreinfo-button-normal" src="website graphics/imgs and icons/icons/arrow-icon-normal.png" alt="normal button">
+                            <img class="moreinfo-button-active" src="website graphics/imgs and icons/icons/arrow-icon-active.png" alt="active button">
+                        </a>                        
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Link where users can apply for a position -->
+            <section class="section-container">
+                <div class="moreinfo-container">
+                    <img class="moreinfo-container moreinfo-img" src="website graphics/imgs and icons/cd-projekt-office.jpg" alt="Photo of CD PROJEKT RED talents">
+                    <div class="moreinfo-link">
+                        <p class="moreinfo-title">
+                            JOIN US TODAY
+                        </p>
+                        <p class="moreinfo-text">
+                            At <span class="red-text-bold">CD PROJEKT RED</span>, we are a family of different nationalities, backgrounds, cultures, etc., but we
+                            share one ultimate goal: <span class="red-text-bold">to create and deliver high-quality games as one family</span>
+                        </p>
+                        <a href="careers.html" target="_blank" class="moreinfo-button">
+                            <img class="moreinfo-button-normal" src="website graphics/imgs and icons/icons/arrow-icon-normal.png" alt="normal button">
+                            <img class="moreinfo-button-active" src="website graphics/imgs and icons/icons/arrow-icon-active.png" alt="active button">
+                        </a>                        
+                    </div>
+                </div>       
+            </section>
+
+            <!-- CD PROJEKT RED's overall stats -->
+            <section class="section-container" id="stats-section">
+                <div class="stats-subheading">
+                    GAMES THAT WE <span class="red-text stats-red-text">TAKE PRIDE IN</span>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stats-text">
+                        WE HAVE RECEIVED <span class="red-text stats-total">1208+</span> GAME AWARDS
+                    </div>
+
+                    <div class="stats-text">
+                        WE SOLD MORE THAN <span class="red-text stats-total">93M</span> COPIES
+                    </div>
+                </div>
+            </section>
+
+            <!-- CD PROJEKT RED's studio locations -->
+            <section class="section-container">
+                <div class="subheading">
+                    OUR STUDIOS
+                </div>
+
+                <div class="text">
+                    We may be five different studios, but we share one goal: <span class="red-text-bold">to deliver gamers the best of games</span>
+                </div>
+
+                <div class="locations">
+                    <!-- Warsaw location -->
+                    <!-- locations-container-index class contains CSS styles specific to index.html that modifies the shared locations-container class, which is from shared-styles.css --> 
+                    <div class="locations-container locations-container-index">
+                        <div class="location-img-container">
+                            <img src="website graphics/locations/warsaw.jpg" alt="Photo of Warsaw">
+                        </div>
+                        <div class="location-desc">
+                            <p class="desc-title">Warsaw</p>
+                            <p class="desc-text">Poland</p>
+                        </div>
+                    </div>
+
+                    <!-- Krakow location -->
+                    <div class="locations-container locations-container-index">
+                        <div class="location-img-container">
+                            <img src="website graphics/locations/krakow.jpg" alt="Photo of Krakow">
+                        </div>
+                        <div class="location-desc">
+                            <p class="desc-title">Krakow</p>
+                            <p class="desc-text">Poland</p>
+                        </div>
+                    </div>
+
+                    <!-- Wroclaw location -->
+                    <div class="locations-container locations-container-index">
+                        <div class="location-img-container">
+                            <img src="website graphics/locations/wroclaw.jpg" alt="Photo of Wroclaw">
+                        </div>
+                        <div class="location-desc">
+                            <p class="desc-title">Wroclaw</p>
+                            <p class="desc-text">Poland</p>
+                        </div>
+                    </div>
+
+                    <!-- Vancouver location -->
+                    <div class="locations-container locations-container-index">
+                        <div class="location-img-container">
+                            <img src="website graphics/locations/vancouver.jpg" alt="Photo of Vancouver">
+                        </div>
+                        <div class="location-desc">
+                            <p class="desc-title">Vancouver</p>
+                            <p class="desc-text">Canada</p>
+                        </div>
+                    </div>
+
+                    <!-- Boston location -->
+                    <div class="locations-container locations-container-index">
+                        <div class="location-img-container">
+                            <img src="website graphics/locations/boston.jpg" alt="Photo of Boston">
+                        </div>
+                        <div class="location-desc">
+                            <p class="desc-title">Boston</p>
+                            <p class="desc-text">United States</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="ftr-container">
+            &copy; 2025 All rights reserved.
+            <img src="website graphics/imgs and icons/icons/logo.png" height="80px" alt="Logo of CD PROJEKT RED">
+        </div>
+    </footer>
+</body>
+</html>

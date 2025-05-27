@@ -1,0 +1,55 @@
+.form {
+    width: 700px;
+    height: auto; /* Height is set automatically depending on the content of the div container */
+    display: flex;
+    flex-wrap: wrap;
+    font-size: clamp(1rem, 1.1vw, 1.1rem); /* Ensures that the font size responds to changes to the screen size */
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+/* Ensures that the form element fills the entire width of .form class */ 
+.form form {
+    width: 100%;
+}
+.form-label {
+    font-weight: 700;
+    font-size: clamp(1.15rem, 1.5vw, 1.5rem);
+}
+.form-column {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* Ensures the three classes have a consistent appearance */
+.form-input, #position, #fileupload {
+    width: 100%;
+    margin: 20px 0 20px 0;
+    padding: 10px;
+}
+.form-textarea {
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+    padding: 12px 20px;
+    resize: none; /* Disables the ability for the user to resize the textarea element */
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+}
+#submit {
+    margin-top: 20px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    padding: 10px;
+    font-weight: 600;
+}
+/* The .form class will fill 90% of the viewport width if the screen is below or equal to 768px */
+@media (max-width: 768px) {
+    .form {
+        width: 90vw;
+    }
+}

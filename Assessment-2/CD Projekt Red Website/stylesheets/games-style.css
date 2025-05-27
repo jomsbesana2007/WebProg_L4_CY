@@ -1,0 +1,171 @@
+.text {
+    font-weight: 400;
+    text-align: justify;
+}
+
+
+/* -- GAME SECTION CSS STYLES -- */
+
+/* Removes all paddings and margins that may interfere with other CSS rules */
+.game-description, .game-title, .description-container {
+    margin: 0;
+}
+/* Formats each container, which contains the graphics and the description, by
+displaying them as flex for responsive elements */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+    height: 600px;
+}
+/* Formats the description container that includes the description and title */
+.desc-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;   
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    border-radius: 0 0 10px 10px;
+    padding: 20px 60px 20px 60px;
+}
+.text.game-desc {
+    width: 50%;
+    font-weight: 500;
+    font-size: clamp(1rem, 1.15vw, 1rem); /* Ensures that the font size responds to changes to the screen size */
+}
+.game-title {
+    font-size: clamp(1.5rem, 2.7vw, 2.7rem);
+    font-weight: 1000;
+    width: 35%;
+}
+/* The button that leads the user to the game store pages */
+.desc-button {
+    display: block;
+    position: relative;
+    height: 70px;
+    width: 70px;
+}
+.gamelink {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+/* Styles for the button when the user doesn't hover over it */
+.gamebutton-normal {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+/* Styles for the button when the user hovers over it */
+.gamebutton-active {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 3; /* Places the active button above the normal button to avoid overlapping */
+    transition: all 0.3s ease-in-out;
+}
+.gamebutton-active:hover {
+    opacity: 1;
+}
+@media (max-width: 768px) {
+    /* Reduces the height of the game container */
+    .game-container {
+        height: 500px;
+    }
+    .desc-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 700px;
+        padding: 20px;
+    }
+    .text.game-desc {
+        text-align: center;
+        margin: 0;
+        width: 95%;
+        font-size: 0.8rem;
+    }
+    .game-title {
+        width: 90%;
+        margin-top: 20px;
+    }
+    /* Sets a smaller size for the desc button */
+    .desc-button {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* Video container formats */
+.video-container {
+    position: relative;
+    overflow: hidden; /* Crops any overlapping elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover; /* Fits the content within the parent container */
+}
+.video-container a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* Thumbnail for the video */
+.thumbnail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.thumbnail img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    width: 100%;
+}
+/* Styles the video element */
+.game-vid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; /* Positions the video element to the top-left side to ensure it aligns with its parent container */
+    left: 0;
+    z-index: 2; /* Positions the video element above the thumbnail */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Media query to remove border-radius properties */
+@media (max-width: 768px) {
+    .video-container, .desc-container {
+        border-radius: 0px;
+    }
+}
